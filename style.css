@@ -1,0 +1,429 @@
+@charset 'UTF-8';
+
+.wrapper{
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+a:hover{
+  opacity: .5;
+}
+
+.site_title{
+  font-size: 40px;
+  text-align: center;
+}
+
+header{
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  padding: 15px 0;
+  background-color: #fff;
+}
+
+header .wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1{
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#drawer_toggle{
+  font-size: 30px;
+  position: absolute;
+  top: 17px;
+  right: 10px;
+  display: none;
+}
+
+#drawer_toggle span{
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+}
+
+#drawer_toggle span + span{
+  margin-top: 7px;
+}
+
+#drawer_toggle.open span {
+  top: 29px;
+  left: 14px;
+  width: 40px;
+  margin: 0;
+}
+
+#drawer_toggle.open span:first-child {
+  transform: rotate(45deg);
+}
+#drawer_toggle.open span:nth-child(2) {
+  display: none;
+}
+#drawer_toggle.open span:last-child {
+  transform: rotate(-45deg);
+}
+
+#drawer_nav{
+  display: none;
+}
+
+header ul{
+  display: flex;
+}
+
+header ul li{
+  margin: 0 20px;
+}
+
+.mainvisual{
+  background-image: url(../img/pexels-karolina-grabowska-4040649.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+}
+
+.mainvisual h2{
+  padding-top: 25%;
+  font-size: 4rem;
+}
+
+.mainvisual p{
+  padding-top: 20px;
+  line-height: 2rem;
+}
+
+#portfolio{
+  padding: 60px 0;
+}
+
+#portfolio ul{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+#portfolio ul li{
+  width: calc((100% - 40px) / 3);
+  margin-top: 40px;
+}
+
+#portfolio ul li img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+#portfolio ul li h3{
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#works{
+  background-color: rgb(211, 205, 205);
+  padding: 60px 0;
+}
+
+#works ul{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+#works ul li{
+  width: calc((100% - 40px) / 3);
+  margin-top: 40px;
+}
+
+#works ul li img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+#works ul li h3{
+  font-weight: bold;
+}
+
+#works ul li p{
+  font-size: 14px;
+}
+
+#skill{
+  padding: 60px 0;
+}
+
+.skill_wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  margin: 30px auto 0;
+}
+
+.skill_icon{
+  background-color: rgb(211, 205, 205);
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.skill_wrapper li{
+  display: flex;
+  align-items: center;
+  width: 50%;
+  padding: 20px;
+}
+
+.skill_wrapper span{
+  display: block;
+}
+
+.skill_wrapper i{
+  font-size: 35px;
+}
+
+.skill_txt{
+  margin-left: 30px;
+}
+
+.skill_txt h3{
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.skill_txt p{
+  font-size: 18px;
+}
+
+#about{
+  background-color: rgb(211, 205, 205);
+  padding: 60px 0;
+}
+
+.about_flex{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto 0;
+}
+
+.about_pic{
+  width: 25%;
+}
+
+.about_pic img{
+  background-color: rgb(244, 239, 239);
+  width: 100%;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.about_txt{
+  margin-left: 30px;
+  width: 60%;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+#contact{
+  padding: 60px 0;
+}
+
+#contact p{
+  margin: 30px 0;
+  text-align: center;
+}
+
+.contact_icon{
+  display: flex;
+  justify-content: center;
+}
+
+.contact_icon li{
+  margin: 0 30px;
+}
+
+.contact_icon li i{
+  font-size: 30px;
+}
+
+footer{
+  background-color: rgb(112, 110, 110);
+  padding: 10px 0;
+  text-align: center;
+  color: #fff;
+}
+
+footer small{
+  font-size: 10px;
+}
+
+.pc{
+  display: block;
+}
+
+.sp{
+  display: none;
+}
+
+@media(max-width:600px){
+
+  .pc{
+    display: none;
+  }
+  
+  .sp{
+    display: block;
+  }
+
+  .site_title{
+    font-size: 30px;
+    text-align: center;
+  }
+
+  header .wrapper{
+    align-items: unset;
+  }
+  
+  #drawer_toggle{
+    z-index: 2;
+    display: block;
+  }
+
+  #drawer_nav{
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 50vh;
+    background-color: #fff;
+    opacity: .7;
+    z-index: 1;
+  }
+
+  #drawer_nav ul{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #drawer_nav li{
+    box-sizing: border-box;
+    position: relative;
+    top: 10%;
+    left: 43%;
+  }
+
+  #sp_nav{
+    display: none;
+  }
+
+  /* header ul{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #fff;
+    opacity: .7;
+  } */
+
+  header ul li{
+    padding: 15px 0;
+    margin: 0;
+  }
+
+  .mainvisual h2{
+    padding-top: 50%;
+    font-size: 3rem;
+  }
+
+  .mainvisual p{
+    padding-top: 20px;
+    font-size: 14px;
+    line-height: 2rem;
+  }
+
+  #portfolio ul{
+    flex-direction: column;
+  }
+  
+  #portfolio ul li{
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin: 40px auto 0; 
+  }
+
+  #portfolio ul li h3{
+    margin: 20px 0;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  #works ul{
+    flex-direction: column;
+  }
+  
+  #works ul li{
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin: 40px auto 0; 
+  }
+
+  #works ul li h3{
+    margin: 20px 0;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  #works ul li p{
+    font-size: 17px;
+  }
+
+  .skill_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto 0;
+  }
+  
+  .skill_icon{
+    background-color: rgb(211, 205, 205);
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    text-align: center;
+  }
+  
+  .skill_wrapper li{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px 0 0 100px;
+  }
+
+
+
+}
